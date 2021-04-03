@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Medium Filter",
+  "version": "1.0.0",
+  "description": "Avoid wasting time opening and immediatly closing medium paying articles. Paying articles will not be clickable from Google Search",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["index.js"],
+      "matches": ["https://www.google.com/search?q=*", "https://medium.com/*"]
+    }
+  ],
+  "icons": { "16": "./assets/x16icon.png", "48": "./assets/x48icon.png", "128": "./assets/x128icon.png" }
+}
