@@ -5,7 +5,6 @@ Array.from(links).forEach(
     if (!node.href.startsWith("https://medium.com/")) {
       return;
     }
-    console.log(`Sending ${node.href}`)
     chrome.runtime.sendMessage(node.href, (response) => {
       /**
        * This is a paying article
